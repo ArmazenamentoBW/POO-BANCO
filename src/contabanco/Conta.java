@@ -25,6 +25,8 @@ public class Conta {
         this.nome = nome;
         if (nome.length() <= 30){
             this.nome = nome;
+            
+            
         }
     }
     public void setSaldo(double valor){
