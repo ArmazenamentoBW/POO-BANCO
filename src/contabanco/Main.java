@@ -5,6 +5,7 @@
  */
 package contabanco;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,16 +19,19 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         Conta C1 = new Conta();
-        String nomeC = JOptionPane.showInputDialog(null,"nome cliente");
-        C1.setNome(nomeC);//("Bruno Morreto");
-        String nconta;
-        nconta = JOptionPane.showInputDialog(null,"Nº da conta");
-        int numeroConta = Integer.parseInt(nconta);
-        C1.numero = numeroConta;
-        String agenc = JOptionPane.showInputDialog(null,"Nº");
-        
-        
-        C1.setSaldo(2000);
+        Scanner ler = new Scanner(System.in);
+        System.out.printf("Nome: ");
+        C1.setNome(ler.next());//("Bruno Morreto");
+        System.out.printf("Numero: ");
+        C1.setNumero(ler.nextInt());
+        System.out.printf("Agencia: ");
+        C1.setAgencia(ler.nextInt());
+        System.out.printf("Limite: ");
+        C1.setLimite(ler.nextDouble());
+        C1.setSaldo();
+   
+        System.out.println("Deseja depositar quantos??");
+        C1.depositar(ler.nextDouble());
         C1.imprimir();                                                                                                                                                                                                                         
         
     }

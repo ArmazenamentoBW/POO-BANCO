@@ -10,27 +10,31 @@ package contabanco;
  * @author 20171bsi0367
  */
 public class Conta {
+    //Atributos da clase
+    private String nome;
+    private double saldo;
+    private double limite;
+    private int agencia;
+    private int numero;
     
-    String nome;
-    double Saldo;
-    double limite;
-    int Agencia;
-    int numero;
-
-    public String getNome() {
-        return nome;
+    //Construtores
+    public void setLimite(double valor){
+        this.limite =  valor;
     }
-
+    
+    public void setAgencia(int valor){
+        this.agencia =  valor;
+    }
+    
     public void setNome(String nome) {
         this.nome = nome;
         if (nome.length() <= 30){
             this.nome = nome;
             
-            
         }
     }
-    public void setSaldo(double valor){
-        this.Saldo = valor;
+    public void setSaldo(){
+        this.saldo = 0;
     }
     
      public void setNumero(int valor){
@@ -38,17 +42,18 @@ public class Conta {
         
     }
     
+     //Metodos
     public void sacar (double valor){
-        this.Saldo -= valor;
+        this.saldo -= valor;
     }
     
     public void depositar (double valor){
-        this.Saldo += valor;
+        this.saldo += valor;
     }
     
     public void imprimir (){
         System.out.println("Prezado, "+ nome);
-        System.out.println("Seu saldo atual é: R$ "+ Saldo);
+        System.out.println("Seu saldo atual é: R$ "+ saldo);
     }
 
     
