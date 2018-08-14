@@ -52,7 +52,7 @@ public class Conta {
     }
     
     public void imprimir (){
-        System.out.println("Prezado, "+ nome);
+        System.out.println("Prezadoo, "+ nome);
         System.out.println("Seu saldo atual é: R$ "+ saldo);
     }
 

@@ -30,10 +30,9 @@ public class Main {
         C1.setLimite(ler.nextDouble());
         C1.setSaldo();
    
-        System.out.println("Deseja depositar quantos??");
+        System.out.println("Desejaa depositar quantos??");
         C1.depositar(ler.nextDouble());
-        C1.imprimir();                                                                                                                                                                                                                         
-        
+        C1.imprimir();                                                                                                                                                                         
     }
     
 }
