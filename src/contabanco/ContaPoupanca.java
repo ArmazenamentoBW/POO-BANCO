@@ -9,18 +9,14 @@ package contabanco;
  *
  * @author 20171bsi0367
  */
-public class Conta {
+public class ContaPoupanca {
     //Atributos da clase
     private String nome;
     private double saldo;
-    private double limite;
     private int agencia;
     private int numero;
     
     //Construtores
-    public void setLimite(double valor){
-        this.limite =  valor;
-    }
     
     public void setAgencia(int valor){
         this.agencia =  valor;
@@ -52,7 +48,7 @@ public class Conta {
     }
     
     public void imprimir (){
-        System.out.println("Prezadooooo, "+ nome);
+        System.out.println("Prezado, "+ nome);
         System.out.println("Seu saldo atual é: R$ "+ saldo);
     }
 

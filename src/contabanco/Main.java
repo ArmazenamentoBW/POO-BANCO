@@ -18,7 +18,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Conta C1 = new Conta();
+        ContaCorrente C1 = new ContaCorrente();
         Scanner ler = new Scanner(System.in);
         System.out.printf("Nome: ");
         C1.setNome(ler.next());//("Bruno Morreto");
@@ -33,6 +33,18 @@ public class Main {
         System.out.println("Desejaaaaa depositar quantos??");
         C1.depositar(ler.nextDouble());
         C1.imprimir();                                                                                                                                                                         
+        
+        ContaPoupanca C2 = new ContaPoupanca();
+        System.out.printf("Nome: ");
+        C2.setNome(ler.next());
+        System.out.printf("Numero: ");
+        C2.setNumero(ler.nextInt());
+        System.out.printf("Agencia: ");
+        C2.setAgencia(ler.nextInt());
+        C2.setSaldo();
+        System.out.println("valor para depositar?");
+        C2.depositar(ler.nextDouble());
+        C2.imprimir();
     }
     
 }
